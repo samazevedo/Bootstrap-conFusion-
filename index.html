@@ -29,10 +29,69 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-cutlery fa-lg"> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"> Contact</span></a></li>
                 </ul>
+                <span class="nav-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in text-white">
+                            Login
+                        </span>
+                    </a>
+
+                </span>
             </div>
         </div>
-
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal_dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Login</h4>
+                    <button class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control form-control-sm mr-1" 
+                                    id="exampleInputEmail3" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword">
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control form-control-sm mr-1" 
+                                    id="exampleInputPassword" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">
+                                        Remember me 
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn0sm ml-auto"
+                                data-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button class="btn btn-primary btn-sm ml-1">
+                                Sign in 
+                            </button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -45,7 +104,9 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a type="button" class="btn btn-warning btn-block btn-sm" role="button" href="#reserve">
+                    <a type="button" class="btn btn-warning btn-block btn-sm" role="button" href="#reserve"
+                        data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>"
+                        data-placement="bottom">
                         Reserve Table
                     </a>
                 </div>
@@ -238,6 +299,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </body>
 
