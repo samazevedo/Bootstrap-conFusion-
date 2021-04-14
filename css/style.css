@@ -39,9 +39,9 @@ body {
 
 .carousel {
   background: indigo; }
-  .carousel .carousel-ite {
+  .carousel .carousel-item {
     height: 300px; }
-    .carousel .carousel-ite img {
+    .carousel .carousel-item img {
       position: absolute;
       top: 0;
       left: 0;
@@ -51,3 +51,12 @@ body {
   right: 0px;
   position: absolute;
   bottom: 0px; }
+
+.modal-header {
+  background-color: indigo;
+  color: floralwhite; }
+  .modal-header button {
+    color: floralwhite; }
+
+.modal-content {
+  background-color: #d1c4e9; }

@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="uft-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit:no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!--specify the boostrap classes-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/style.css">
-
     <title>Ristorante Con Fusion</title>
 </head>
-
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar" >
@@ -30,7 +25,8 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"> Contact</span></a></li>
                 </ul>
                 <span class="nav-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- TASK 1 -REMOVE THE DATA-* -->
+                    <a id="loginButton">
                         <span class="fa fa-sign-in text-white">
                             Login
                         </span>
@@ -39,7 +35,6 @@
             </div>
         </div>
     </nav>
-
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -97,11 +92,11 @@
                     <div class="modal-header">
                         <h4 class="modal-title" id="reserveTable">Reserve a Table</h4>
                         <!-- BUTTON TO CLOSE THE MODAL-->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>                                                        
-                    <div class="container-fluid">
+                    <div class="modal-body">
                         <div class="row mt-3 col-12">
                             <div class="col-12 col-sm-2">
                                 <h6>Number of Guests</h6>
@@ -206,7 +201,6 @@
             </div>
         </div>
     </div>
-
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -218,19 +212,15 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-
-
                     <!-- BUTTON TRIGGER MODAL -->
-
-                    <a type="button" class="btn btn-warning btn-block btn-sm" role="button"
-                        data-toggle="modal" data-target="#reservation">
+                    <!-- TASK 1 -REMOVE THE DATA-* -->
+                    <a id="reserveButton"type="button" class="btn btn-warning btn-block btn-sm" role="button">
                         Reserve Table
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    
     <div class="container">
         <!-- CAROUSEL-->
         <div class="row row-content">
@@ -285,7 +275,6 @@
                 </div> 
             </div>
         </div>
-        
         <div class="row row-content align-items-center" >
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -397,12 +386,26 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
-
             });
-
         });
-
+    </script>
+    <!--TASK 2 AAPROPRIATE JAVASCRIPT TO TRIGGER THE RESERVE TABLE MODEL MODAL-->
+    <script>
+        $(document).ready(function() {
+            $('#reservation').modal('hide');
+            $('#reserveButton').click(function() {
+                $('#reservation').modal('show');
+            });
+        });
+    </script>
+    <!--JAVASCRIPT TO TRIGGER LOGIN MODAL-->
+    <script>
+        $(document).ready(function(){
+            $('#loginModal').modal('hide');
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('show');
+            });           
+        });
     </script>
 </body>
-
 </html>
