@@ -4,10 +4,12 @@
         <meta charset="uft-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit:no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- build:css css/main.css-->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
         <link rel="stylesheet" href="css/style.css">
+        <!-- endbuild -->
         <title>Ristorante Con Fusion</title>
     </head>
     <body>
@@ -25,7 +27,6 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"> Contact</span></a></li>
                     </ul>
                     <span class="nav-text">
-                        <!-- TASK 1 -REMOVE THE DATA-* -->
                         <a id="loginButton">
                             <span class="fa fa-sign-in text-white">
                                 Login
@@ -85,13 +86,11 @@
             </div>
         </div>
         <div class="col-12 col-sm-8 offset-sm-2">
-            <!-- MODAL RESERVE A TABLE-->
             <div class="modal fade " id="reservation" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title" id="reserveTable">Reserve a Table</h4>
-                            <!-- BUTTON TO CLOSE THE MODAL-->
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -212,8 +211,6 @@
                         <img src="img/logo.png" class="img-fluid">
                     </div>
                     <div class="col-12 col-sm-3 align-self-center">
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <!-- TASK 1 -REMOVE THE DATA-* -->
                         <a id="reserveButton"type="button" class="btn btn-warning btn-block btn-sm" role="button">
                             Reserve Table
                         </a>
@@ -245,7 +242,7 @@
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
-                                <h2">Alberto Somayya</h2>
+                                <h2>Alberto Somayya</h2>
                                 <h4>Executive Chef</h4>
                                 <p class="d-none d-sm-block">
                                     Award winning three-star Michelin chef with wide International
@@ -369,10 +366,11 @@
         </footer>
         <script src="js/scripts.js"></script>
         <!--JQUERY FIRST, THEN POPPERS.JS, THEN BOOTSTRAP JS-->
+        <!-- build:js js/main.js-->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- ADDING JQUERY FUNCTION FOR THE CAROUSEL BUTTON-->
         <script src="js/scripts.js"></script> 
+        <!-- endbuild-->
     </body>
 </html>
