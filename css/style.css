@@ -8,28 +8,48 @@
   border-bottom: 1px ridge;
   min-height: 400px; }
 
+.welcome-msg {
+  color: #fff; 
+  text-shadow: 1px 1px 1px #000;
+}
+#reserveButton {
+  background-color:#ffa500;
+  color:#fff;
+  border: none;
+  box-shadow: 1px 1px 5px  #000;
+}
+
+
 .footer {
-  background-color: #d1c4e9;
+  background-color: rgb(21, 5, 32);
   margin: 0px auto;
-  padding: 20px 0px; }
+  padding: 20px 0px; 
+  color: #fff;
+}
+.footer li a {
+  color: #fd5234;
+}
+
 
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #9575cd;
-  color: floralwhite; }
-
+  background-image: url('../img/background.jpg');
+  background-size: 100% ;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 address {
   font-size: 80%;
   margin: 0px;
-  color: #0f0f0f; }
+  color: #fff; }
 
 body {
   padding: 50px 0px 0px 0px;
   z-index: 0; }
 
 .navbar-dark {
-  background-color: indigo; }
+  background-color: rgb(21, 5, 32); }
 
 .tab-content {
   border-left: 1px solid #ddd;
@@ -60,3 +80,7 @@ body {
 
 .modal-content {
   background-color: #d1c4e9; }
+
+#contact-address address {
+  color: #000;
+}
